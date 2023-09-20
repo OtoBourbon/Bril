@@ -1,0 +1,398 @@
+/* fonts ----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+/* animations  ----------------*/
+@keyframes jumpingEffect {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+@keyframes littleShake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0px); }
+}
+
+@keyframes rotateAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(10deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+/* default settings ----------------*/
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+    font-size: 16px;
+    color: #F7F6F3;
+    font-family: 'Inclusive Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol,
+li{
+    list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+/* custom settings ----------------*/
+.wrapper {
+    height: 2800px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/pexels-cameron-casey-1722183.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* navbar  ----------------*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 40px;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: #F7F6F3;
+    font-family: 'Caveat', cursive;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 800;
+    margin-left: 10%;
+    /* animation: jumpingEffect 1s ease forwards; */
+    animation: littleShake 0.5s ease-in-out;
+    cursor: pointer;
+    text-shadow: 2px 2px 2px rgba(241, 241, 241, 0.51);
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 4rem;
+    margin-right: 10%;
+    margin-top: 0.7rem;
+    animation: littleShake 0.5s ease-in-out;
+
+}
+
+.navbar-menu a:hover {
+    color: #ff6a00;
+    transition: color 0.2s linear;
+}
+
+.navbar-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* welcome text */
+
+.welcome-text{
+    color: #bb8829;
+    position: relative;
+    top: 15rem;
+    left: 20%;
+    font-size: 1.5rem;
+    /* animation: littleShake 0.5s ease-in-out; */
+    animation: jumpingEffect 1s ease forwards;
+    height: 300px;
+    width: 60%;
+    word-spacing: 4px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#welcome{
+    font-size: 4.3rem;
+    color: #835f1b;
+    display: block;
+    padding: 10px;
+    font-weight: 800;
+}
+
+/* V button  */
+
+#scroll-button{
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 20px;
+    color: #F7F6F3;
+    position: absolute;
+    left: 50%;
+    align-items: center;
+    top: 90%;
+    /* animation: rotateAnimation 0.3s ease */
+    /* animation: jumpingEffect 1s ease forwards; */
+    transform: translateX(-50%);
+    transition: font-size 0.2s ease;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+#scroll-button:hover{
+    /* animation: rotateAnimation 0.3s ease; */
+    font-size: 29px;
+}
+
+/* about us  */
+
+#aboutd{
+    position: relative;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    /* height: 500px; */
+}
+
+#about{
+    position: relative;
+    background: transparent;
+    top: 50px;
+    height: 100%;
+    border: 1px solid #bb8829;
+    border-radius: 20px;
+}
+
+.about-us{
+    padding: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#about-head{
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+#about-text{
+    font-size: 1.5rem;
+    padding-bottom: 30px;
+}
+
+/* services  */
+
+#services{
+    width: 100%;
+    /* height: 500px; */
+    position: relative;
+    top: 30%;
+    justify-content: center;
+}
+
+.service-div{
+    position: relative;
+    width: 90%;
+    height: 90%;
+    padding-top: 100px;
+    left: 5%;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #bb8829;
+
+}
+
+#service-head{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+#cards-div{
+    position: absolute;
+    width: 100%;
+    margin-top: 7%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    
+}
+
+.cards{
+    border: 1px solid #F7F6F3;
+    width: 20%;
+    border-radius: 20px;
+    font-family:'Courier New', Courier, monospace
+}
+
+.cards p{
+    margin: 10px;
+}
+
+.card-name{
+    margin: 20px;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+
+
+/* This part is for devices with a width of less than 768px ----------------*/
+@media (max-width: 768px) {
+
+    .wrapper{
+        height: 3200px;
+    }
+
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+    .navbar-toggle {
+        display: block;
+        position: relative;
+        z-index: 1;
+
+    }
+    .navbar-menu.active {
+        display: flex;
+        position: absolute;
+        left: 45%;
+        top: 8rem;
+        /* align-items: center;
+        justify-content: center; */
+        animation: jumpingEffect 0.5s ease forwards;
+        z-index: 1;
+    }
+
+    .navbar-menu.active a{
+        margin-bottom: 50px;
+    }
+
+    .navbar-brand {
+        margin-left: 7%;
+        font-size: 2rem;
+        z-index: 1;
+    }
+
+    #scroll-button{
+        top: 47rem;
+    }
+
+    .jumpingDiv{
+        animation: jumpingEffect 0.5s ease forwards;
+        background-color: rgb(10, 10, 15);
+        position: absolute;
+        width: 100%;
+        height: 22rem;
+        z-index: 0;
+    }
+
+    .welcome-text{
+        width: 90%;
+        left: 5%;
+        font-size: 1.2rem;
+        text-align: center;
+        top: 13rem;
+
+    }
+
+    #welcome{
+        left: 50%;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    #about-head{
+        font-size: 3rem;
+    }
+
+    #about-text{
+        font-size: 1rem;
+    }
+
+    #cards-div{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+    }
+
+    .cards{
+        width: 90%;
+    }
+
+    .service-div{
+    padding-top: 50px;
+
+    }
+
+}
+
+@media (max-width: 355px) {
+    #welcome{
+        font-size: 2.7rem;
+    }
+
+    .welcome-text{
+        font-size: 1rem;
+    }
+}
