@@ -106,7 +106,7 @@ h6 {
 .wrapper {
     height: 2800px;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(images/pexels-cameron-casey-1722183.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(pexels-cameron-casey-1722183.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
